@@ -1,5 +1,5 @@
 {
-  "name": "ZooTracker",
+  "name": "zootracker",
   "version": "1.0.0",
   "scripts": {
     "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\" ",
@@ -48,7 +48,7 @@
     "type": "git",
     "url": "git+https://github.com/TuesdayHat/ZooTracker.git"
   },
-  "author": "",
+  "author": "Adam Calhoun",
   "bugs": {
     "url": "https://github.com/TuesdayHat/ZooTracker/issues"
   },
