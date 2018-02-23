@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
-import { Animal } from './animal.model';
-
-@Component({
-  selector: 'app-root',
-  template:`
-  <div class="container">
-  </div>
-  `
-})
-
-export class AppComponent {}
+export class Animal {
+  constructor(
+    public species: string,
+    public name: string,
+    public age: number,
+    public location: string,
+    public sex: string,
+    public likes: string,
+    public dislikes: string,
+    public caretakers: number
+  ){ }
+}

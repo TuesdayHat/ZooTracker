@@ -6,10 +6,10 @@ import { FormsModule }  from '@angular/forms';
 
 
 @NgModule({
-  imports: [ BrowserModule, FormsModule ], //lists requirements for this module only
+  imports: [ BrowserModule, FormsModule ],
   declarations: [ AppComponent,
-                  ], //components this module controls
-  bootstrap:    [ AppComponent ] //launch these components on load
+                  ],
+  bootstrap:    [ AppComponent ]
 })
 
-export class AppModule{} //standard name for root module class
+export class AppModule{}
