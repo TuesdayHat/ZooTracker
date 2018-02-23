@@ -33,7 +33,7 @@ import { Animal } from './animal.model';
     <label>Dislikes: </label>
     <input #newDislikes>
 
-    <button (click)="submitForm(newName, newSpecies, newAge, newSex.value, newLocation, newCaretakers, newLikes, newDislikes); newName.value=''; newSpecies.value=''; newAge.value=''; newSex.value.value=''; newLocation.value=''; newCaretakers.value=''; newLikes.value=''; newDislikes.value='';">Add New Animal</button>
+    <button (click)="submitForm(newName, newSpecies, Number(newAge), newSex.value, newLocation, Number(newCaretakers), newLikes, newDislikes); newName.value=''; newSpecies.value=''; newAge.value=''; newSex.value.value=''; newLocation.value=''; newCaretakers.value=''; newLikes.value=''; newDislikes.value='';">Add New Animal</button>
   </div>
   `
 })
@@ -42,7 +42,7 @@ export class NewAnimalComponent{
   @Output() newAnimalSender = new EventEmitter();
 
   submitForm(name: string, species: string, age: number, sex: string, location: string, caretakers: number, likes:string, dislikes:string){
-    var newAnimalToAdd: Animal = new Animal(name, species, age, sex, location, caretakers, likes, dislikes);
+    var newAnimalToAdd: Animal = new Animal(species, name, age, location, sex, likes, dislikes, caretakers);
     this.newAnimalSender.emit(newAnimalToAdd)
   }
 }
