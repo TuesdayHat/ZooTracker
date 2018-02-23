@@ -17,16 +17,20 @@ _User can enter an animal's information for the app to keep track of. The app wi
 * open index.html in your browser
 
 ## To Do
+Short term:
 * make list of animals a bit more readable (thinking split into 2 columns)
+  * more ways to sort the list
+  * sort vs. filter list
 * make the whole thing prettier in general -- styling is mainly functional.
   * instead of separate section for editing, replace animal you're editing right now with edit fields for all sections -- current values as defaults.
 * allow the user to add pictures to animals
 * timestamps for animal entry; update animal age
   * set animal birthday (if known -- default to entry date otherwise)
 
+Long term:
 * proper database back end so the app does not dump everything when it closes
   * required to build 99% of the following:
-* animals badly need unique ID's
+* Unique ID for each animal
   * paired with database above, can be used to give each animal its own auto-generated web page.
 * More detailed taxonomic information input for each animal (genus, phyla, etc.);
   * use to expand search/sort function -- search for all dogs, all mammals, etc.

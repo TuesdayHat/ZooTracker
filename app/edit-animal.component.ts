@@ -5,30 +5,30 @@ import { Animal } from './animal.model';
   selector: 'edit-animal',
   template: `
   <div class="form-group">
-    <div *ngIf="selectedAnimal">
-      <h3>Edit {{selectedAnimal.name}} the {{selectedAnimal.species}}</h3>
+    <div *ngIf="childSelectedAnimal">
+      <h3>Edit {{childSelectedAnimal.name}} the {{childSelectedAnimal.species}}</h3>
 
       <label>Edit name:</label>
-      <input [(ngModel)]="selectedAnimal.name">
+      <input [(ngModel)]="childSelectedAnimal.name">
 
       <label>Edit species:</label>
-      <input [(ngModel)]="selectedAnimal.species">
+      <input [(ngModel)]="childSelectedAnimal.species"> <br>
 
-      <label>Edit sex:</label>
-      <input type="radio" [(ngModel)]="selectedAnimal.sex" [value]="Male">Male<br>
-      <input type="radio" [(ngModel)]="selectedAnimal.sex" [value]="Female">Female<br>
+      <label>Edit sex:</label><br>
+      <input type="radio" [(ngModel)]="childSelectedAnimal.sex" value="Male">Male <br>
+      <input type="radio" [(ngModel)]="childSelectedAnimal.sex" value="Female">Female<br>
 
       <label>Edit location:</label>
-      <input [(ngModel)]="selectedAnimal.location">
+      <input [(ngModel)]="childSelectedAnimal.location">
 
       <label>Edit caretakers:</label>
-      <input [(ngModel)]="selectedAnimal.caretakers">
+      <input [(ngModel)]="childSelectedAnimal.caretakers">
 
       <label>Edit likes:</label>
-      <input [(ngModel)]="selectedAnimal.likes">
+      <input [(ngModel)]="childSelectedAnimal.likes">
 
       <label>Edit dislikes:</label>
-      <input [(ngModel)]="selectedAnimal.dislikes">
+      <input [(ngModel)]="childSelectedAnimal.dislikes">
 
       <button (click)="doneButtonClicked()">Done</button>
     </div>
@@ -39,4 +39,8 @@ import { Animal } from './animal.model';
 export class EditAnimalComponent{
   @Input() childSelectedAnimal: Animal;
   @Output() doneButtonClickedSender = new EventEmitter();
+
+  doneButtonClicked() {
+    this.doneButtonClickedSender.emit();
+  }
 }
