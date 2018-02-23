@@ -14,7 +14,7 @@ _User can enter an animal's information for the app to keep track of. The app wi
   * ```npm install```
   * ```bower install```
   * ```gulp build```
-* open the Build folder, and open index.html in your browser
+* open index.html in your browser
 
 ## To Do
 * make list of animals a bit more readable (thinking split into 2 columns)

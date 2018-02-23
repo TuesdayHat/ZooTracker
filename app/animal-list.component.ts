@@ -14,11 +14,11 @@ import { Animal } from './animal.model';
     <p>{{currentAnimal.name}} the {{currentAnimal.species}}</p>
     <p>{{currentAnimal.age}} years old</p>
     <p>{{currentAnimal.sex}}</p>
-    <p>{{currentAnimal.locaton}}</p>
-    <p>{{currentAnimal.caretakers}}</p>
-    <p>{{currentAnimal.likes}}</p>
-    <p>{{currentAnimal.dislikes}}</p>
-    <button (click)="editButtonHasBeenClicked(currentTask)">Edit!</button>
+    <p>Located at the {{currentAnimal.location}}</p>
+    <p>Caretakers: {{currentAnimal.caretakers}}</p>
+    <p>Likes: {{currentAnimal.likes}}</p>
+    <p>Dislikes: {{currentAnimal.dislikes}}</p>
+    <button (click)="editButtonHasBeenClicked(currentAnimal)">Edit!</button>
   </div>
   `
 })
@@ -31,5 +31,9 @@ export class AnimalListComponent{
 
   onChange(optionFromMenu) {
     this.filterByAge = optionFromMenu;
+  }
+
+  editButtonHasBeenClicked(animalToEdit: Animal){
+    this.clickSender.emit(animalToEdit);
   }
 }
