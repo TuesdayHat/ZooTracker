@@ -13,6 +13,7 @@ _User can enter an animal's information for the app to keep track of. The app wi
 ## To Do
 * make list of animals a bit more readable (thinking split into 2 columns)
 * make the whole thing prettier in general -- styling is mainly functional.
+  * instead of separate section for editing, replace animal you're editing right now with edit fields for all sections -- current values as defaults.
 * allow the user to add pictures to animals
 * proper database back end so the app does not dump everything when it closes
 * timestamps for animal entry; update animal age
