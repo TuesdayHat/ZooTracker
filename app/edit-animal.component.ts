@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Animal } from './animal.model';
 
 @Component({
@@ -36,7 +36,7 @@ import { Animal } from './animal.model';
   `
 })
 
-export class {
+export class EditAnimalComponent{
   @Input() childSelectedAnimal: Animal;
   @Output() doneButtonClickedSender = new EventEmitter();
 }

@@ -22,7 +22,7 @@ import { Animal } from './animal.model';
 
 export class AppComponent {
   masterAnimalList: Animal[] = [];
-  let selectedAnimal = null;
+  selectedAnimal = null;
 
   addAnimal(newAnimalFromChild: Animal){
     this.masterAnimalList.push(newAnimalFromChild);
