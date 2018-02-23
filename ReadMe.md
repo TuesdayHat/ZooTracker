@@ -14,7 +14,7 @@ _User can enter an animal's information for the app to keep track of. The app wi
   * ```npm install```
   * ```bower install```
   * ```gulp build```
-* open index.html in your browser
+* run ```gulp serve``` and a browser window will open
 
 ## To Do
 Short term:
