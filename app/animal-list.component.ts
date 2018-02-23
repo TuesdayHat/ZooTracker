@@ -27,7 +27,9 @@ export class {
   @Input() childAnimalList: Animal[];
   @Output() clickSender = new EventEmitter();
 
+  filterByAge: string = 'all';
+
   onChange(optionFromMenu) {
-  this.filterByAge = optionFromMenu;
-}
+    this.filterByAge = optionFromMenu;
+  }
 }
